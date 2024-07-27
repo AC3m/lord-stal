@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap");
+
+$primary-color: #000f2b;
+$secondary-color: #ffc20a;
+$tertiary-color: #f4f5f7;
+$quaternary-color: #b73d3d;
+$font-family: "Coda", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family;
+}
+
+body {
+  height: 100vh;
+  color: $tertiary-color;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  font-weight: 400;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary-color;
+  color: $tertiary-color;
+  padding: 30px 20px 15px 20px;
+  text-align: center;
+
+  //   z-index: 999;
+}
+
+.navigation {
+  width: 100%;
+  color: $tertiary-color;
+  background-color: $primary-color;
+  padding: 20px 40px;
+  text-align: center;
+  border-top: 0.1px solid rgba(255, 255, 255, 0.2);
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    text-transform: uppercase;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: $secondary-color;
+  }
+}
+
+.main-content {
+  color: $primary-color;
+  text-align: left;
+  padding: 40px;
+  h1 {
+    color: $secondary-color;
+    font-size: 48px;
+    font-weight: 400;
+    padding: 10px 0px;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+
+    padding: 5px 0px;
+  }
+  p {
+    padding: 5px 0px;
+  }
+}
+
+footer {
+  margin-top: auto; // Pushes the footer to the bottom
+  background-color: $primary-color;
+  text-align: center;
+  padding: 20px 20px;
+}
