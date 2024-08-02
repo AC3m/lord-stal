@@ -1,6 +1,6 @@
-import "./App.scss";
+import "../App.scss";
 
-export default function HomePage() {
+export default function Home() {
   return (
     <div className="main-content">
       <h1>Home</h1>
