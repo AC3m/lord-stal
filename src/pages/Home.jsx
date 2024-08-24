@@ -2,7 +2,7 @@ import "../App.scss";
 
 export default function Home() {
   return (
-    <div className="main-content">
+    <main>
       <h1>Home</h1>
       <h2>LORD-STAL</h2>
       <h2>KONSTRUCKJE STALOWE</h2>
@@ -16,6 +16,6 @@ export default function Home() {
         dodatków.
       </p>
       <p>Zapewniamy najwyższą jakość wykonania.</p>
-    </div>
+    </main>
   );
 }
