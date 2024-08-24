@@ -2,11 +2,13 @@ const configuratorForm = [
   { label: "Szerokość Garazu", element: "input", required: false, id: 0 },
   { label: "Długość", element: "input", required: false, id: 1 },
   { label: "Wysokość", element: "input", required: false, id: 2 },
+
   {
     label: "Układ blachy",
     element: "select",
     options: ["Poziomo", "Pionowo"],
     required: false,
+
     id: 3,
   },
   {
@@ -22,6 +24,7 @@ const configuratorForm = [
     options: ["Uchylna", "Dwuskrzydłowa"],
     required: false,
     id: 5,
+
   },
   {
     label: "Ilość bram",
