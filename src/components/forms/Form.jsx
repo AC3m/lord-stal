@@ -1,51 +1,44 @@
+import { useState } from "react";
 import "../../data/configuratorData";
 import configuratorForm from "../../data/configuratorData";
 import "./Form.scss";
+import { Input } from "./Input";
+import { Select } from "./Select";
+import { EmailInputSet } from "./EmailInputSet";
+import { TextArea } from "./TextArea";
 
 export function Form() {
+  const formValues = configuratorForm.map((el) =>
+    el["options"] ? { [el.label]: `${el["options"][0]}` } : { [el.label]: "" }
+  );
+
+  const [formData, setFormData] = useState(formValues);
+
+  // formData state will be used while sending data to an email. This is TODO. For now just console.log.
+  // console.log(formData);
+
+  function handleChange(e, id) {
+    const { name, value } = e.target;
+    setFormData((prevFormData) =>
+      prevFormData.map((el, i) => (i === id ? { ...el, [name]: value } : el))
+    );
+  }
+
   const mapFormRendering = {
-    input: (el) => (
-      <li key={el.id}>
-        <label>{el.label}</label>
-        <input type="text"></input>
-      </li>
-    ),
+    input: (el) => <Input el={el} onHandleChange={handleChange} key={el.id} />,
     select: (el) => (
-      <li key={el.id}>
-        <label>{el.label}</label>
-        <select className="custom-select">
-          {el.options.map((option) => (
-            <option value={option} key={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </li>
+      <Select el={el} onHandleChange={handleChange} key={el.id} />
     ),
     email: (el) => (
-      <li key={el.id}>
-        <label className="required-label">{el.label}</label>
-        <div className="input-set">
-          <div className="input-container">
-            <input type="text" />
-            <label>E-mail</label>
-          </div>
-          <div className="input-container">
-            <input type="text" />
-            <label>Potwierdź adres e-mail</label>
-          </div>
-        </div>
-      </li>
+      <EmailInputSet el={el} onHandleChange={handleChange} key={el.id} />
     ),
     textarea: (el) => (
-      <li key={el.id}>
-        <label>{el.label}</label>
-        <textarea></textarea>
-      </li>
+      <TextArea el={el} onHandleChange={handleChange} key={el.id} />
     ),
   };
+
   return (
-    <form className="form-container">
+    <form className="form-container" onClick={(e) => e.preventDefault()}>
       <ul>
         {configuratorForm.map((el) => mapFormRendering[el.element](el))}
         <li>
