@@ -1,0 +1,56 @@
+@use "../../../utils/_variables" as v;
+
+.navigation {
+  width: 100%;
+  color: v.$tertiary-color;
+  background-color: v.$primary-color;
+  padding: 20px 40px;
+  text-align: center;
+  border-top: 0.1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+  text-transform: uppercase;
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      color: v.$secondary-color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+
+    &.open {
+      max-height: 100%;
+      opacity: 1;
+      padding: 20px 25px;
+    }
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+
+    &.open {
+      display: flex;
+    }
+  }
+}

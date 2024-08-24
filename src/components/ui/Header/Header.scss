@@ -1,0 +1,36 @@
+@use "../../../utils/_variables" as v;
+
+header {
+  font-weight: 400;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: v.$primary-color;
+  color: v.$tertiary-color;
+  padding: 30px 20px 15px 20px;
+  text-align: center;
+
+  //   z-index: 999;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .burger-menu {
+    display: block;
+    position: absolute;
+    left: 20px;
+  }
+}

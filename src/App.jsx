@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
+import Navigation from "./components/ui/Navigation/Navigation";
+import Header from "./components/ui/Header/Header";
+import Footer from "./components/ui/Footer/Footer";
 import Home from "./pages/Home";
-import Navigation from "./components/Navigation/Navigation";
+import Navigation from "./components/ui/Navigation/Navigation";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Offer from "./pages/Offer";
 import Configurator from "./pages/Configurator";
 import MetalColor from "./pages/MetalColor";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
