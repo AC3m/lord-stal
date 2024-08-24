@@ -5,6 +5,7 @@ import Navigation from "./components/ui/Navigation/Navigation";
 import Header from "./components/ui/Header/Header";
 import Footer from "./components/ui/Footer/Footer";
 import Home from "./pages/Home";
+import Navigation from "./components/ui/Navigation/Navigation";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Offer from "./pages/Offer";

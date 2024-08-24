@@ -1,0 +1,8 @@
+@use "../../utilities/_variables" as v;
+
+footer {
+  margin-top: auto; // Pushes the footer to the bottom
+  background-color: v.$primary-color;
+  text-align: center;
+  padding: 20px 20px;
+}
