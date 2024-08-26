@@ -1,4 +1,4 @@
-@use "../../utilities/_variables" as v;
+@use "../../utils/_variables" as v;
 
 header {
   font-weight: 400;
@@ -11,6 +11,13 @@ header {
   text-align: center;
 
   //   z-index: 999;
+}
+
+.logo {
+  height: 20%;
+  width: 20%;
+  display: block;
+  margin: 0 auto;
 }
 
 .burger-menu {
@@ -32,5 +39,11 @@ header {
     display: block;
     position: absolute;
     left: 20px;
+  }
+  .logo {
+    height: 50%;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
   }
 }

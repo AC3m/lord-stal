@@ -5,8 +5,7 @@ function Header({ onBurgerMenuToggle }) {
   return (
     <header>
       <BurgerMenu onBurgerMenuToggle={onBurgerMenuToggle} />
-      {/* TODO: change for image logo */}
-      <h1>LORD-STAL</h1>
+      <img className="logo" src="src/assets/logo.png" alt="" />
     </header>
   );
 }
