@@ -1,34 +1,17 @@
+@use "../utils/variables" as v;
+
 .contact {
-  height: 90vh;
 
   .contact-header {
     height: 16.67%;
     display: flex;
     justify-items: center;
-    @media (min-width: 764px) {
-      height: 30%;
-    }
   }
 
-  .contact-title {
-    text-align: center;
-    color: #ffc20a;
-    font-size: 50px;
-    font-weight: 500;
-    padding: 40px;
-    text-transform: uppercase;
-    line-height: 1.2;
-    @media (min-width: 764px) {
-      font-size: 3.75rem;
-      padding-left: 7rem;
-    }
-  }
 
   .contact-content {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 60%;
     justify-content: center;
     @media (min-width: 764px) {
       flex-direction: row;
@@ -43,24 +26,16 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
-    @media (min-width: 764px) {
-      width: 33.33%;
-      margin-top: 0;
-    }
   }
 
   .contact-icon {
     padding-bottom: 1rem;
-    font-size: 60px;
-    color: #69727d; /* secondary grey */
-    @media (min-width: 764px) {
-      font-size: 100px;
-    }
+    font-size: 85px;
+    color: v.$grey-color;
   }
 
   .contact-info {
     text-align: center;
-    font-weight: 500;
     padding-bottom: 0.5rem;
     padding-top: 1rem;
     font-size: 1.5rem;
@@ -69,12 +44,12 @@
     }
 
     a {
-      color: #00102E; /* bg dark blue */
+      color: v.$primary-color;
       text-decoration: none;
       transition: color 0.3s ease-in-out;
 
       &:hover {
-        color: #ffc20a; /* primary yellow */
+        color: v.$secondary-color;
       }
     }
   }

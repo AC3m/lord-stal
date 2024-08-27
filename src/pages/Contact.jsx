@@ -4,7 +4,7 @@ import './Contact.scss';
 
 const Contact = () => {
     return (
-        <div className="contact">
+        <main className="contact">
             <div className="contact-header">
                 <h1 className="contact-title">KONTAKT</h1>
             </div>
@@ -28,7 +28,7 @@ const Contact = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 

@@ -4,7 +4,7 @@
   width: 100%;
   color: v.$tertiary-color;
   background-color: v.$primary-color;
-  padding: 20px 40px;
+  padding: 15px 40px;
   text-align: center;
   border-top: 0.1px solid rgba(255, 255, 255, 0.2);
 }
@@ -21,6 +21,7 @@
     color: white;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 14px;
 
     &:hover {
       color: v.$secondary-color;
