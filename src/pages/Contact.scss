@@ -1,0 +1,56 @@
+@use "../utils/variables" as v;
+
+.contact {
+
+  .contact-header {
+    height: 16.67%;
+    display: flex;
+    justify-items: center;
+  }
+
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (min-width: 764px) {
+      flex-direction: row;
+      height: 75%;
+      justify-content: space-around;
+    }
+  }
+
+  .contact-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .contact-icon {
+    padding-bottom: 1rem;
+    font-size: 85px;
+    color: v.$grey-color;
+  }
+
+  .contact-info {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    @media (min-width: 764px) {
+      font-size: 1.875rem;
+    }
+
+    a {
+      color: v.$primary-color;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: v.$secondary-color;
+      }
+    }
+  }
+}
